@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<!--Bài 8- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử. Chương trình-->
+<!--sắp xếp mảng theo thứ tự giảm dần và hiển thị ra mảng đã được sắp xếp.-->
+
+<h1>sắp xếp mảng theo thứ tự giảm dần và hiển thị</h1>
+<h2 id="ht"></h2>
+<input type="text" id="ptMoi"><br>
+<button onclick="themPT()">thêm phần tử</button>
+<br>
+<button onclick="xapXep()">Xắp xếp</button>
+<br>
+<h1 id="htkq"></h1>
+<script>
+  let array =[]
+  function themPT(){
+    let themPT =document.getElementById('ptMoi').value;
+    array.push(themPT)
+    document.getElementById('ht').innerHTML="các phần tử đã đã thêm vào là : "+array
+  }
+  function xapXep(){
+    let kq=[];
+    for (let i = 0; i <array.length ; i++) {
+      kq.push(array[i])
+    }
+    kq.sort();
+    kq.reverse();
+    document.getElementById('htkq').innerHTML="các phần tử đã được sắp xếp giảm dần là : "+kq
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<!--Bài 3- Viết chương trình khởi tạo mảng số nguyên. Hiển hiện giá trị lớn nhất trong mảng đó. In ra-->
+<!--giá trị trung bình của các phần tử trong mảng-->
+<h1>Viết chương trình thị ra được phần tử có giá trị lớn nhất trong mảng 10 phan tu và vị trí của phần tử đó </h1>
+<h2 id="ht"></h2>
+<script>
+  let array =[20,1,14,6,47,78,0,24,-69,89,]
+  function tinhKetQua(){
+    let arrayMax=array[0];
+    let tong=0;
+    for (let i = 0; i <= array.length ; i++) {
+      if (arrayMax < array[i]){
+        arrayMax=array[i]
+        tong+= array[i]/array.length
+      }
+    }
+    document.getElementById('ht').innerHTML= "giá trí lớn nhất là"+arrayMax+"giá trị trung binh các phần tử là"+tong
+
+  }
+  tinhKetQua()
+</script>
+</body>
+</html>

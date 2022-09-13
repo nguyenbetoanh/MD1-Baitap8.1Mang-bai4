@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    h2{
+      color: red;
+    }
+    h3{
+      color: cyan;
+    }
+  </style>
+</head>
+<body>
+<!--Bài 9- Viết chương trình khởi tạo/nhập vào 2 mảng số nguyên gồm 10 phần tử, gọi là mảng a và-->
+<!--b. Mảng c là một mảng được khai báo gồm 20 phần tử số nguyên. Chương trình sẽ lưu các phần-->
+<!--tử được nối từ hai mảng b và a vào mảng c. Hiển thị mảng c.-->
+
+<h1>Nối  hai mảng b và a vào mảng c. Hiển thị mảng c</h1>
+<h2 id="ht"></h2>
+nhập 1 chuỗi số nguyên  a vào <br>
+<input type="text" id="ptMoi">
+<button onclick="themPT()">thêm phần tử</button>
+<br> <br> <br>
+nhập 1 chuỗi số nguyên  a vào <br>
+<h3 id="htNew" ></h3>
+<input type="text" id="new">
+<button onclick="newPT()">thêm PT cần check</button>
+<br> <br> <br>
+<button onclick="check()">Hiển thị kết quả </button>
+<br>
+<h2>hiển thị kết quả C</h2>
+<h1 id="ketQua"> </h1>
+<script>
+  let array =[]
+  function themPT(){
+    let themPT =document.getElementById('ptMoi').value;
+    array.push(themPT)
+    document.getElementById('ht').innerHTML="các phần tử đã đã thêm vào là : " + array
+  }
+  let newArr =[]
+  function newPT(){
+    let newPT =document.getElementById('new').value;
+    newArr.push(newPT)
+    document.getElementById('htNew').innerHTML="các phần tử cần check   là : " + newArr
+  }
+  function check(){
+   let C=[];
+   C.push(array)
+    C.push(newArr)
+    document.getElementById('ketQua').innerHTML="các phần tử C là : " + C
+  }
+</script>
+</body>
+</html>>
